@@ -5,7 +5,6 @@
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"     review="review.couchbase.org" />
   <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/"     review="review.couchbase.org" />
   <remote name="blevesearch"   fetch="git://github.com/blevesearch/" />
-  <remote name="sitaramv"   fetch="git://github.com/sitaramv/" />
 
   <default remote="couchbase" revision="master" />
 
@@ -33,11 +32,11 @@
   <project name="kv_engine" groups="kv"/>
   <project name="libcouchbase" revision="release-2.10" groups="notdefault,enterprise"/>
   <project name="magma" groups="notdefault,enterprise,kv_ee" remote="couchbase-priv" />
-  <project name="ns_server"/>
+  <project name="ns_server_features" remote="couchbaselabs" revision="n2n" path="ns_server"/>
   <project name="phosphor" groups="kv"/>
   <project name="platform" groups="kv"/>
   <project name="product-texts" groups="kv"/>
-  <project name="query"   remote="sitaramv"  path="goproj/src/github.com/couchbase/query"/>
+  <project name="query"     path="goproj/src/github.com/couchbase/query"/>
   <project name="query-ui"/>
   <project name="sigar" groups="kv"/>
   <project name="subjson" groups="kv"/>

@@ -21,8 +21,20 @@
             "release_name": "Alice (mainline)",
             "parent": "branch-master.xml",
             "production": true,
-            "start_build": 1950,
+            "start_build": 2300,
             "interval": 120,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-32630"
+        },
+        "couchbase-server/alice/6.0.1.xml": {
+            "branch": "alice-6.0.1",
+            "release": "alice",
+            "release_name": "Alice 6.0.1",
+            "parent": "couchbase-server/alice.xml",
+            "production": true,
+            "start_build": 2038,
+            "interval": 1440,
             "keep_git": true,
             "restricted": true,
             "approval_ticket": "MB-31466"
@@ -104,10 +116,10 @@
             "parent": "branch-master.xml",
             "production": true,
             "start_build": 6200,
-            "interval": 1440,
+            "interval": 120,
             "keep_git": true,
             "restricted": true,
-            "approval_ticket": "MB-32216"
+            "approval_ticket": "MB-33096"
         },
         "couchbase-server/spock/5.1.2.xml": {
             "branch": "spock-5.1.2",

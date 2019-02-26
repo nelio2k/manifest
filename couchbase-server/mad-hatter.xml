@@ -30,7 +30,7 @@
   <project name="eventing"  path="goproj/src/github.com/couchbase/eventing" groups="notdefault,enterprise"/>
   <project name="eventing-ee" path="goproj/src/github.com/couchbase/eventing-ee" remote="couchbase-priv" groups="notdefault,enterprise"/>
   <project name="kv_engine" groups="kv"/>
-  <project name="libcouchbase" groups="notdefault,enterprise"/>
+  <project name="libcouchbase" revision="release-2.10" groups="notdefault,enterprise"/>
   <project name="magma" groups="notdefault,enterprise,kv_ee" remote="couchbase-priv" />
   <project name="ns_server"/>
   <project name="phosphor" groups="kv"/>
@@ -81,9 +81,10 @@
   <project name="godbc"                                                              path="godeps/src/github.com/couchbase/godbc"/>
   <project name="go_json"                                                            path="godeps/src/github.com/couchbase/go_json"/>
   <project name="vellum"                                                             path="godeps/src/github.com/couchbase/vellum"/>
+  <project name="n1fty"                                                              path="godeps/src/github.com/couchbase/n1fty"/>
 
   <!-- Go support libraries - Bleve-supported -->
-  <project name="bleve"            remote="blevesearch" revision="d72521093e14a38cb92e22042aed18ca7a1e8fd4" path="godeps/src/github.com/blevesearch/bleve"/>
+  <project name="bleve"            remote="blevesearch" revision="05d86ea8f6e30456949f612cf68cf4a27ce8c9c5" path="godeps/src/github.com/blevesearch/bleve"/>
   <project name="blevex"           remote="blevesearch" revision="4b158bb555a3297565afecf6fae675c74f1e47df" path="godeps/src/github.com/blevesearch/blevex"/>
   <project name="bleve-mapping-ui" remote="blevesearch" revision="f551b6d4f32bb920a83dd28c705bddd5de0d03b2" path="godeps/src/github.com/blevesearch/bleve-mapping-ui"/>
   <project name="go-porterstemmer" remote="blevesearch" revision="23a2c8e5cf1f380f27722c6d2ae8896431dc7d0e" path="godeps/src/github.com/blevesearch/go-porterstemmer"/>
@@ -103,6 +104,7 @@
   <project name="go-metrics"     remote="couchbasedeps" revision="dee209f2455f101a5e4e593dea94872d2c62d85d"  path="godeps/src/github.com/rcrowley/go-metrics" />
   <project name="go-zookeeper"   remote="couchbasedeps" revision="fa6674abf3f4580b946a01bf7a1ce4ba8766205b"  path="godeps/src/github.com/samuel/go-zookeeper" />
   <project name="bolt"           remote="couchbasedeps" revision="51f99c862475898df9773747d3accd05a7ca33c1" path="godeps/src/github.com/boltdb/bolt"/>
+  <project name="etcd-bbolt"     remote="couchbasedeps" revision="7ee3ded59d4835e10f3e7d0f7603c42aa5e83820" path="godeps/src/github.com/etcd-io/bbolt"/>
   <project name="cznic-b"        remote="couchbasedeps" revision="b96e30f1b7bd34b0b9d8760798d67eca83d7f09e" path="godeps/src/github.com/cznic/b"/>
   <project name="go-bindata-assetfs" remote="couchbasedeps" revision="57eb5e1fc594ad4b0b1dbea7b286d299e0cb43c2" path="godeps/src/github.com/elazarl/go-bindata-assetfs"/>
   <project name="golang-snappy"  remote="couchbasedeps" revision="723cc1e459b8eea2dea4583200fd60757d40097a" path="godeps/src/github.com/golang/snappy"/>
@@ -143,6 +145,7 @@
   <project name="zstd"            remote="couchbasedeps" revision="aebefd9fcb99f22cd691ef778a12ed68f0e6a1ab" path="godeps/src/github.com/DataDog/zstd"/>
   <project name="opentracing-go"  remote="couchbasedeps" revision="1949ddbfd147afd4d964a9f00b24eb291e0e7c38" path="godeps/src/github.com/opentracing/opentracing-go"/>
   <project name="grpc-go"         remote="couchbasedeps" revision="refs/tags/v1.17.0" path="godeps/src/google.golang.org/grpc"/>
+  <project name="participle"      remote="couchbasedeps" revision="bf8340a459bd383e5eb7d44a9a1b3af23b6cf8cd" path="godeps/src/github.com/alecthomas/participle"/>
   <project name="go-genproto"     remote="couchbasedeps" revision="2b5a72b8730b0b16380010cfe5286c42108d88e7" path="godeps/src/google.golang.org/genproto"/>
   <project name="golang-pkg-pcre" remote="couchbasedeps" revision="48bb82a8b8ceea98f4e97825b43870f6ba1970d6" path="godeps/src/github.com/glenn-brown/golang-pkg-pcre"/>
 

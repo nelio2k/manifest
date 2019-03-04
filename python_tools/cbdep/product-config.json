@@ -1,8 +1,8 @@
 {
     "manifests": {
         "python_tools/cbdep/master.xml": {
-            "release": "0.9.1",
-            "release_name": "cbdep 0.9.1",
+            "release": "0.9.2",
+            "release_name": "cbdep 0.9.2",
             "production": true,
             "restricted": false,
             "start_build": 1,

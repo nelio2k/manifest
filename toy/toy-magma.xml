@@ -22,7 +22,7 @@
   <project name="couch_rocks" remote="couchbase-priv" groups="notdefault,kv_ee,enterprise"/>
   <project name="couchbase-cli" groups="kv"/>
   <project name="couchdb"/>
-  <project name="couchstore" groups="kv"/>
+  <project name="couchstore" groups="kv" revision="8ab24189be384eb480fb0dddd2d7db096d71125a" />
   <project name="docloader" path="goproj/src/github.com/couchbase/docloader" />
   <project name="forestdb" revision="vulcan" groups="kv"/>
   <project name="geocouch"/>
@@ -38,7 +38,7 @@
   <project name="magma" groups="notdefault,enterprise,kv_ee" remote="couchbase-priv" />
   <project name="ns_server" revision="magma" remote="t3rm1n4l" />
   <project name="phosphor" groups="kv"/>
-  <project name="platform" groups="kv"/>
+  <project name="platform" groups="kv" revision="7f7c6e3a8d210033ad539a25623dc5eb63df26ae" />
   <project name="product-texts" groups="kv"/>
   <project name="query"     path="goproj/src/github.com/couchbase/query"/>
   <project name="query-ui"/>

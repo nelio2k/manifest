@@ -84,7 +84,7 @@
   <project name="n1fty"                                                              path="godeps/src/github.com/couchbase/n1fty"/>
 
   <!-- Go support libraries - Bleve-supported -->
-  <project name="bleve"            remote="blevesearch" revision="05d86ea8f6e30456949f612cf68cf4a27ce8c9c5" path="godeps/src/github.com/blevesearch/bleve"/>
+  <project name="bleve"            remote="blevesearch" revision="67c3a1fa5884bc2ba7d9f4d362e5d435594a5a0d" path="godeps/src/github.com/blevesearch/bleve"/>
   <project name="blevex"           remote="blevesearch" revision="4b158bb555a3297565afecf6fae675c74f1e47df" path="godeps/src/github.com/blevesearch/blevex"/>
   <project name="bleve-mapping-ui" remote="blevesearch" revision="f551b6d4f32bb920a83dd28c705bddd5de0d03b2" path="godeps/src/github.com/blevesearch/bleve-mapping-ui"/>
   <project name="go-porterstemmer" remote="blevesearch" revision="23a2c8e5cf1f380f27722c6d2ae8896431dc7d0e" path="godeps/src/github.com/blevesearch/go-porterstemmer"/>
@@ -154,7 +154,7 @@
   <project name="googletest"     remote="couchbasedeps" revision="f397fa5ec6365329b2e82eb2d8c03a7897bbefb5" groups="kv"/>
   <project name="gsl-lite"       remote="couchbasedeps" revision="refs/tags/v0.25.0" path="third_party/gsl-lite" groups="kv"/>
   <project name="spdlog"         remote="couchbasedeps" revision="v1.1.0-couchbase" path="third_party/spdlog"   groups="kv"/>
-  <project name="HdrHistogram_c" remote="couchbasedeps" revision="refs/tags/0.9.7" path="third_party/HdrHistogram_c" groups="kv"/>
+  <project name="HdrHistogram_c" remote="couchbasedeps" revision="d87b8eca1351288e477eb3b38c1e02792c181128" path="third_party/HdrHistogram_c" groups="kv"/>
 
   <!-- Couchbase internal build infrastructure -->
   <project name="build"      path="cbbuild"           groups="notdefault,build">

@@ -1,9 +1,9 @@
 {
     "product": "couchbase-lite-ios",
     "manifests": {
-        "couchbase-lite-ios/iridium.xml": {
-            "release": "2.5.0",
-            "release_name": "Couchbase Lite iOS - Iridium 2.5.0",
+        "couchbase-lite-ios/cobalt.xml": {
+            "release": "2.6.0",
+            "release_name": "Couchbase Lite iOS - Cobalt 2.6.0",
             "production": true,
             "interval": 240,
             "restricted": false,
@@ -12,9 +12,20 @@
             "do-build": true,
             "module_projects": [ "couchbase-lite-ios-ee", "couchbase-lite-ios" ]
         },
+        "couchbase-lite-ios/iridium.xml": {
+            "release": "2.5.0",
+            "release_name": "Couchbase Lite iOS - Iridium 2.5.0",
+            "production": true,
+            "interval": 240,
+            "restricted": false,
+            "start_build": 219,
+            "keep_git": true,
+            "do-build": true,
+            "module_projects": [ "couchbase-lite-ios-ee", "couchbase-lite-ios" ]
+        },
         "couchbase-lite-ios/2.1.xml": {
-            "release": "2.1.4",
-            "release_name": "Couchbase Lite iOS - 2.1.4",
+            "release": "2.1.5",
+            "release_name": "Couchbase Lite iOS - 2.1.5",
             "production": true,
             "interval": 90,
             "restricted": false,
@@ -22,6 +33,16 @@
             "keep_git": true,
             "module_projects": [ "couchbase-lite-ios-ee", "couchbase-lite-ios" ]
         },
+        "couchbase-lite-ios/2.1/2.1.4.xml": {
+             "release": "2.1.4",
+             "release_name": "Couchbase Lite iOS - 2.1.4",
+             "production": true,
+             "interval": 1440,
+             "restricted": false,
+             "start_build": 5,
+             "keep_git": true,
+             "module_projects": [ "couchbase-lite-ios-ee", "couchbase-lite-ios" ]
+         },
         "couchbase-lite-ios/2.1/2.1.3.xml": {
              "release": "2.1.3",
              "release_name": "Couchbase Lite iOS - 2.1.3",

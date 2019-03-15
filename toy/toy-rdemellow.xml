@@ -4,9 +4,8 @@
   <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/"    review="review.couchbase.org" />
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"     review="review.couchbase.org" />
   <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/"     review="review.couchbase.org" />
+  <remote name="rdemellow" fetch="git://github.com/rdemellow/"     />
   <remote name="blevesearch"   fetch="git://github.com/blevesearch/" />
-  <remote name="jimwwalker"   fetch="ssh://github.com/jimwwalker/" />
-
 
   <default remote="couchbase" revision="master" />
 
@@ -156,12 +155,12 @@
   <project name="googletest"     remote="couchbasedeps" revision="f397fa5ec6365329b2e82eb2d8c03a7897bbefb5" groups="kv"/>
   <project name="gsl-lite"       remote="couchbasedeps" revision="refs/tags/v0.25.0" path="third_party/gsl-lite" groups="kv"/>
   <project name="spdlog"         remote="couchbasedeps" revision="v1.1.0-couchbase" path="third_party/spdlog"   groups="kv"/>
-  <project name="HdrHistogram_c" remote="couchbasedeps" revision="3a9ec56f92352826ff9b67232222f28942884c15" path="third_party/HdrHistogram_c" groups="kv"/>
+  <project name="HdrHistogram_c" remote="rdemellow" revision="cache_line_fix" path="third_party/HdrHistogram_c" groups="kv"/>
 
   <!-- Couchbase internal build infrastructure -->
   <project name="build"      path="cbbuild"           groups="notdefault,build">
-    <annotation name="VERSION" value="6.5.0"     keep="true"/>
+    <annotation name="VERSION" value="0.0.0"     keep="true"/>
   </project>
-  <project name="voltron" remote="jimwwalker" revision="windows_cbup" groups="notdefault,packaging" />
+  <project name="voltron"    remote="couchbase-priv"  groups="notdefault,packaging" />
   <project name="couchdbx-app" groups="notdefault,packaging" />
 </manifest>

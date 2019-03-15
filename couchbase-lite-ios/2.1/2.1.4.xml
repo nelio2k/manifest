@@ -16,14 +16,14 @@
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned primary repositories               -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-ios-ee" remote="couchbaselabs-priv" revision="release/2.1.x" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-ios" revision="release/2.1.x" path="couchbase-lite-ios-ee/couchbase-lite-ios"/>
+  <project name="couchbase-lite-ios-ee" remote="couchbaselabs-priv" revision="6aac2af9ea47abbde44614676675f0e6f17f98f6" groups="enterprise,notdefault"/>
+  <project name="couchbase-lite-ios" revision="65d9aff9be9668959b465a1aed1bc6520d3d8885" path="couchbase-lite-ios-ee/couchbase-lite-ios"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned Couchbase Lite Core                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="couchbase-lite-core-EE" remote="couchbase-priv" revision="e7e91b8a1a349ea6ef9ca8f933a2e350a34ed9b7" path="couchbase-lite-ios-ee/couchbase-lite-core-EE" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-core" revision="5a42fcf0265612dbdc4d474ca7ac55c6282f86aa" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core"/>
+  <project name="couchbase-lite-core" revision="0267cc39dd92c72d1b6a8046847cede8cdc425f1" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core"/>
   <project name="couchbase-lite-core.wiki" revision="10f890e990f8ae260170ef32e9af2c9dd8de2e6b" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/wiki"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -48,12 +48,12 @@
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned mobile testkit                     -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="mobile-testkit" remote="couchbaselabs-priv" revision="feature/cbl20-ver1" groups="notdefault"/>
+  <project name="mobile-testkit" remote="couchbaselabs-priv" revision="bdd0d08376c737d09d1843ee528cd4bbfcba1222" groups="notdefault"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="build" revision="864f6b81c1526ce2029dd3b2d8ad2bd760c9551b">
-    <annotation name="VERSION" value="2.1.5" keep="true"/>
+    <annotation name="VERSION" value="2.1.4" keep="true"/>
   </project>
 </manifest>

@@ -16,14 +16,14 @@
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned primary repository                 -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-net-ee" remote="couchbaselabs-priv" revision="release/iridium" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-net" revision="release/iridium" path="couchbase-lite-net-ee/couchbase-lite-net"/>
+  <project name="couchbase-lite-net-ee" remote="couchbaselabs-priv" revision="master" groups="enterprise,notdefault"/>
+  <project name="couchbase-lite-net" revision="master" path="couchbase-lite-net-ee/couchbase-lite-net"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned Couchbase Lite Core                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="couchbase-lite-core-EE" remote="couchbase-priv" revision="3bfc618860793a5a2778688cfa85ca58e161c128" path="couchbase-lite-net-ee/couchbase-lite-core-EE" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-core" revision="db48f678adc748f877def59636f069977f574d16" path="couchbase-lite-net-ee/couchbase-lite-net/vendor/couchbase-lite-core"/>
+  <project name="couchbase-lite-core" revision="b78c08aa3496ea64e651f196b9f53ca24468fe2f" path="couchbase-lite-net-ee/couchbase-lite-net/vendor/couchbase-lite-core"/>
   <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-lite-net-ee/couchbase-lite-net/vendor/couchbase-lite-core/wiki"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -48,7 +48,7 @@
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="product-texts"/>
-  <project name="build" path="cbbuild" revision="671ea1d94ad417c1a301094098b1ceae8462fd04">
-    <annotation name="VERSION" value="2.5.0" keep="true"/>
+  <project name="build" path="cbbuild">
+    <annotation name="VERSION" value="2.6.0" keep="true"/>
   </project>
 </manifest>

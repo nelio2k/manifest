@@ -16,23 +16,23 @@
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned primary repository                 -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-mobile-tools" remote="couchbaselabs" revision="release/iridium" path="couchbase-mobile-tools">
+  <project name="couchbase-mobile-tools" remote="couchbaselabs" revision="dev" path="couchbase-mobile-tools">
     <copyfile src="ci/cbl-log/CMakeLists.txt" dest="CMakeLists.txt"/>
   </project>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned Couchbase Lite Core                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-core" revision="release/iridium" path="couchbase-mobile-tools/vendor/couchbase-lite-core"/>
+  <project name="couchbase-lite-core" revision="master" path="couchbase-mobile-tools/vendor/couchbase-lite-core"/>
   <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-mobile-tools/vendor/couchbase-lite-core/wiki"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned utility libraries                  -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="BLIP-Cpp" remote="couchbaselabs" revision="0a6346a133860967b4492e6e731843ae9b453587" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/BLIP-Cpp"/>
-  <project name="fleece" remote="couchbaselabs" revision="b2c4784a687b4d956c2bbf92b00e38411e2c2bac" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/fleece"/>
+  <project name="BLIP-Cpp" remote="couchbaselabs" revision="ea5f698685b1b570ea34fd2fa3d53ad1b865217f" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/BLIP-Cpp"/>
+  <project name="fleece" remote="couchbaselabs" revision="b6d770de2d4e477fa3627e247012eeb9bc73a684" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/fleece"/>
   <project name="jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/fleece/vendor/jsonsl"/>
-  <project name="sqlite3-unicodesn" remote="snej" revision="43445380e5c3ecb546472f86d5c56732a4267a3a" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/sqlite3-unicodesn"/>
+  <project name="sqlite3-unicodesn" remote="snej" revision="9042c6eed69e98623ad64e27cec4c1f7f60dde92" path="couchbase-mobile-tools/vendor/couchbase-lite-core/vendor/sqlite3-unicodesn"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Third-party utility libraries                      -->
@@ -48,7 +48,7 @@
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="build" path="cbbuild" revision="c80bef8f86361400d574badb3e5cb4a6b57a5350">
-    <annotation name="VERSION" value="2.5.0" keep="true"/>
+    <annotation name="VERSION" value="2.6.0" keep="true"/>
   </project>
   <project name="product-texts"/>
   <project name="tlm"/>

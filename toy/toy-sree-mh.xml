@@ -5,14 +5,13 @@
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"     review="review.couchbase.org" />
   <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/"     review="review.couchbase.org" />
   <remote name="blevesearch"   fetch="git://github.com/blevesearch/" />
-  <remote name="jimwwalker"   fetch="ssh://github.com/jimwwalker/" />
-
+  <remote name="cbft_toy"   fetch="git://github.com/sreekanth-cb/" />
 
   <default remote="couchbase" revision="master" />
 
   <!-- Core Couchbase Server projects -->
   <project name="backup" remote="couchbase-priv" path="goproj/src/github.com/couchbase/backup" groups="notdefault,enterprise"/>
-  <project name="cbft" path="goproj/src/github.com/couchbase/cbft"/>
+  <project name="cbft" remote="cbft_toy" path="goproj/src/github.com/couchbase/cbft" revision="75baa807bd43254d4157eb6a16e7220434618434"/>
   <project name="cbftx" remote="couchbase-priv" path="goproj/src/github.com/couchbase/cbftx" groups="notdefault,enterprise"/>
   <project name="cbgt" path="goproj/src/github.com/couchbase/cbgt"/>
   <project name="cbq-gui" remote="couchbase-priv" path="goproj/src/github.com/couchbase/cbq-gui"  groups="notdefault,enterprise"/>
@@ -162,6 +161,6 @@
   <project name="build"      path="cbbuild"           groups="notdefault,build">
     <annotation name="VERSION" value="6.5.0"     keep="true"/>
   </project>
-  <project name="voltron" remote="jimwwalker" revision="windows_cbup" groups="notdefault,packaging" />
+  <project name="voltron"    remote="couchbase-priv"  groups="notdefault,packaging" />
   <project name="couchdbx-app" groups="notdefault,packaging" />
 </manifest>

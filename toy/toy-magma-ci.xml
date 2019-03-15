@@ -5,8 +5,10 @@
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"     review="review.couchbase.org" />
   <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/"     review="review.couchbase.org" />
   <remote name="blevesearch"   fetch="git://github.com/blevesearch/" />
-  <remote name="jimwwalker"   fetch="ssh://github.com/jimwwalker/" />
 
+  <remote name="couchbaselabs-priv" fetch="ssh://git@github.com/couchbaselabs/" review="review.couchbase.org"/>
+  <remote name="hisundar" fetch="git://github.com/hisundar/" review="review.couchbase.org"/>
+  <remote name="t3rm1n4l" fetch="git://github.com/t3rm1n4l/" review="review.couchbase.org"/>
 
   <default remote="couchbase" revision="master" />
 
@@ -20,7 +22,7 @@
   <project name="couch_rocks" remote="couchbase-priv" groups="notdefault,kv_ee,enterprise"/>
   <project name="couchbase-cli" groups="kv"/>
   <project name="couchdb"/>
-  <project name="couchstore" groups="kv"/>
+  <project name="couchstore" groups="kv" />
   <project name="docloader" path="goproj/src/github.com/couchbase/docloader" />
   <project name="forestdb" revision="vulcan" groups="kv"/>
   <project name="geocouch"/>
@@ -31,19 +33,19 @@
   <project name="plasma"    path="goproj/src/github.com/couchbase/plasma" remote="couchbase-priv" groups="notdefault,enterprise"/>
   <project name="eventing"  path="goproj/src/github.com/couchbase/eventing" groups="notdefault,enterprise"/>
   <project name="eventing-ee" path="goproj/src/github.com/couchbase/eventing-ee" remote="couchbase-priv" groups="notdefault,enterprise"/>
-  <project name="kv_engine" groups="kv"/>
+  <project name="kv_engine" groups="kv" />
   <project name="libcouchbase" revision="release-2.10" groups="notdefault,enterprise"/>
   <project name="magma" groups="notdefault,enterprise,kv_ee" remote="couchbase-priv" />
-  <project name="ns_server"/>
+  <project name="ns_server" revision="magma" remote="t3rm1n4l" />
   <project name="phosphor" groups="kv"/>
-  <project name="platform" groups="kv"/>
+  <project name="platform" groups="kv" />
   <project name="product-texts" groups="kv"/>
   <project name="query"     path="goproj/src/github.com/couchbase/query"/>
   <project name="query-ui"/>
   <project name="sigar" groups="kv"/>
   <project name="subjson" groups="kv"/>
   <project name="testrunner"/>
-  <project name="tlm" groups="kv">
+  <project name="tlm" groups="kv" remote="couchbaselabs" revision="magma" upstream="magma">
     <copyfile src="GNUmakefile"    dest="GNUmakefile"    />
     <copyfile src="Makefile"       dest="Makefile"       />
     <copyfile src="CMakeLists.txt" dest="CMakeLists.txt" />
@@ -86,7 +88,7 @@
   <project name="n1fty"                                                              path="godeps/src/github.com/couchbase/n1fty"/>
 
   <!-- Go support libraries - Bleve-supported -->
-  <project name="bleve"            remote="blevesearch" revision="67c3a1fa5884bc2ba7d9f4d362e5d435594a5a0d" path="godeps/src/github.com/blevesearch/bleve"/>
+  <project name="bleve"            remote="blevesearch" revision="15a9e8ac955e0941fc0c777face30263dca089dc" path="godeps/src/github.com/blevesearch/bleve"/>
   <project name="blevex"           remote="blevesearch" revision="4b158bb555a3297565afecf6fae675c74f1e47df" path="godeps/src/github.com/blevesearch/blevex"/>
   <project name="bleve-mapping-ui" remote="blevesearch" revision="f551b6d4f32bb920a83dd28c705bddd5de0d03b2" path="godeps/src/github.com/blevesearch/bleve-mapping-ui"/>
   <project name="go-porterstemmer" remote="blevesearch" revision="23a2c8e5cf1f380f27722c6d2ae8896431dc7d0e" path="godeps/src/github.com/blevesearch/go-porterstemmer"/>
@@ -162,6 +164,6 @@
   <project name="build"      path="cbbuild"           groups="notdefault,build">
     <annotation name="VERSION" value="6.5.0"     keep="true"/>
   </project>
-  <project name="voltron" remote="jimwwalker" revision="windows_cbup" groups="notdefault,packaging" />
+  <project name="voltron"    remote="couchbase-priv"  groups="notdefault,packaging" />
   <project name="couchdbx-app" groups="notdefault,packaging" />
 </manifest>

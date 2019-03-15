@@ -1,8 +1,8 @@
 {
     "manifests": {
-        "cbdeps/curl/master.xml": {
-            "release": "7.64.0",
-            "release_name": "curl 7.64.0",
+        "cbdeps/protoc-gen-go/master.xml": {
+            "release": "1.3.0",
+            "release_name": "protoc-gen-go 1.3.0",
             "production": true,
             "restricted": false,
             "start_build": 1,

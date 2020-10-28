@@ -1,8 +1,8 @@
 {
     "manifests": {
         "cbdeps/protoc-gen-go/master.xml": {
-            "release": "1.3.0",
-            "release_name": "protoc-gen-go 1.3.0",
+            "release": "1.2.5",
+            "release_name": "protoc-gen-go 1.2.5",
             "production": true,
             "restricted": false,
             "start_build": 1,
@@ -10,13 +10,16 @@
             "jenkins_job": "cbdeps-build",
             "platforms": [ "amzn2",
                            "centos7",
+                           "centos8",
                            "debian8",
                            "debian9",
+                           "debian10",
                            "macos",
                            "suse12",
                            "suse15",
                            "ubuntu16.04",
                            "ubuntu18.04",
+                           "ubuntu20.04",
                            "windows_msvc2017" ],
             "do-build": false,
             "keep_git": true

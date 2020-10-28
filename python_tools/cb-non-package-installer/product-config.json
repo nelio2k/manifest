@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "python_tools/cb-non-package-installer/master.xml": {
+            "release": "6.6.0",
+            "release_name": "cb-non-package-installer 6.6.0",
+            "production": true,
+            "restricted": false,
+            "start_build": 1,
+            "interval": 120,
+            "jenkins_server": "server.jenkins.couchbase.com",
+            "jenkins_job": "python-tool-build",
+            "platforms": [ "centos6" ],
+            "do-build": true,
+            "keep_git": false
+        }
+    }
+}

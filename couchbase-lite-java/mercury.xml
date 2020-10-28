@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="couchbase" fetch="git://github.com/couchbase/" review="review.couchbase.org"/>
+  <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/" review="review.couchbase.org"/>
+  <remote name="couchbaselabs-priv" fetch="ssh://git@github.com/couchbaselabs/" review="review.couchbase.org"/>
+
+  <default remote="couchbase" revision="release/mercury"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Build support - build scripts, etc.                -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="build" path="cbbuild" groups="notdefault" revision="5f3415b1a8ff88eeac8afe0cc6c12bd73a997c3d">
+    <annotation name="VERSION" value="2.7.1" keep="true"/>
+  </project>
+
+  <project name="couchbase-lite-build" path="couchbase-lite-build">
+    <linkfile src="all/settings-ee.gradle" dest="settings.gradle" />
+    <linkfile src="all/version.txt" dest="version.txt"/>
+  </project>
+
+  <project name="product-texts" path="product-texts" revision="master"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Couchbase-owned primary repository                 -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="couchbase-lite-java" path="couchbase-lite-java" revision="release/java/mercury"/>
+  <project name="couchbase-lite-java-ee" path="couchbase-lite-java-ee" remote="couchbaselabs-priv" revision="release/java/mercury">
+    <linkfile src="build.gradle" dest="build.gradle" />
+    <linkfile src="gradle" dest="gradle" />
+    <linkfile src="gradlew" dest="gradlew" />
+    <linkfile src="gradlew.bat" dest="gradlew.bat" />
+    <linkfile src="gradlew.properties" dest="gradlew.properties" />
+  </project>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Couchbase-owned Couchbase Lite Core                -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="couchbase-lite-core" sync-s="true" path="couchbase-lite-core"/>
+  <project name="couchbase-lite-core-EE" sync-s="true" remote="couchbase-priv" path="couchbase-lite-core-EE"/>
+</manifest>

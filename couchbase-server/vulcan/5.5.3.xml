@@ -149,5 +149,5 @@
     <annotation name="VERSION" value="5.5.3" keep="true"/>
   </project>
   <project name="voltron" revision="bfbac1bc4d8b0604e464d5177479164054dff2bf" remote="couchbase-priv" groups="notdefault,packaging"/>
-  <project name="couchdbx-app" groups="notdefault,packaging" revision="c545a8563778bfc40284caf9213c7925488e633a"/>
+  <project name="couchdbx-app" groups="notdefault,packaging" revision="2ce6ce3597dd9437210446a861a3a881ca4bb248"/>
 </manifest>

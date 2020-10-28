@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="couchbase" fetch="git://github.com/couchbase/" review="review.couchbase.org"/>
+  <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/" review="review.couchbase.org"/>
+  <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/" review="review.couchbase.org"/>
+  <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"/>
+  <remote name="arangodb" fetch="git://github.com/arangodb/"/>
+  <remote name="snej" fetch="git://github.com/snej/"/>
+  <remote name="leetal" fetch="git://github.com/leetal/"/>
+  <remote name="google" fetch="git://github.com/google/"/>
+
+  <default remote="couchbase" revision="master"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Couchbase-owned Couchbase Lite Core and EE         -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="couchbase-lite-core"/>
+  <project name="couchbase-lite-core-EE" remote="couchbase-priv" groups="notdefault,enterprise"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Couchbase-owned utility libraries                  -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="fleece" remote="couchbaselabs" revision="97ffe16f59ed27f56395421be7b4992358177ef9" path="couchbase-lite-core/vendor/fleece"/>
+  <project name="jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c" path="couchbase-lite-core/vendor/fleece/vendor/jsonsl"/>
+  <project name="sqlite3-unicodesn" remote="snej" revision="9042c6eed69e98623ad64e27cec4c1f7f60dde92" path="couchbase-lite-core/vendor/sqlite3-unicodesn"/>
+  <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-lite-core/wiki"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Third-party utility libraries                      -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="mbedtls" remote="couchbasedeps" revision="ec3a2712b1bd77158dd42b28681101c4da6f3c93" path="couchbase-lite-core/vendor/mbedtls"/>
+  <project name="mbed-crypto" remote="couchbasedeps" revision="6572da5ba51abf56b3f0cc554fa3efec8f847a24" path="couchbase-lite-core/vendor/mbedtls/crypto"/>
+  <project name="ios-cmake" remote="leetal" revision="29668dbcd9ef2fd7369140b7e9bd9df0485497f6" path="couchbase-lite-core/vendor/ios-cmake"/>
+  <project name="sockpp" remote="couchbasedeps" revision="8dad5c3c2dc7e5b926bcf4e2fb3ec272dc85dff1" path="couchbase-lite-core/vendor/sockpp"/>
+  <project name="zlib" remote="couchbasedeps" revision="cacf7f1d4e3d44d871b605da3b647f07d718623f" path="couchbase-lite-core/vendor/zlib"/>
+  <project name="SQLiteCpp" remote="couchbasedeps" revision="7b250854fffbdc13e2d040a7e96be8e561e51d08" path="couchbase-lite-core/vendor/SQLiteCpp"/>
+  <project name="googletest" remote="google" revision="ec44c6c1675c25b9827aacd08c02433cccde7780" path="couchbase-lite-core/vendor/SQLiteCpp/googletest"/>
+  <project name="civetweb" remote="couchbasedeps" revision="4341c169a789b917a4fe1cdd24f55e507d855ff5" path="couchbase-lite-core/vendor/civetweb"/>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- Build support - build scripts, etc.                -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <project name="tlm" revision="2d46e032cf08727e8e5fab67d05c4f1b051989e4"/>
+  <project name="build" path="cbbuild" revision="2e9d89d03b360f2d9f9c9ddbdc8fa532d41ab3d9">
+    <annotation name="VERSION" value="3.0.0" keep="true"/>
+    <copyfile src="scripts/jenkins/lite-core/CMakeLists.txt" dest="CMakeLists.txt"/>
+  </project>
+</manifest>

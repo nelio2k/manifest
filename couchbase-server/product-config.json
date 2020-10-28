@@ -7,22 +7,108 @@
             "interval": 1440,
             "keep_git": true
         },
-        "couchbase-server/mad-hatter.xml": {
-            "release": "mad-hatter",
-            "release_name": "Mad-Hatter (mainline)",
+        "couchbase-server/cheshire-cat.xml": {
+            "release": "cheshire-cat",
+            "release_name": "Cheshire-Cat (mainline)",
             "parent": "branch-master.xml",
             "production": true,
             "start_build": 1000,
+            "trigger_blackduck": true,
             "interval": 60,
             "keep_git": true
         },
-        "couchbase-server/alice.xml": {
-            "release": "alice",
-            "release_name": "Alice (mainline)",
+        "couchbase-server/development/magma-preview.xml": {
+            "release": "magma-preview",
+            "release_name": "Magma Preview (development)",
+            "parent": "couchbase-server/mad-hatter.xml",
+            "production": false,
+            "start_build": 1000,
+            "interval": 1440,
+            "keep_git": true,
+            "restricted": false,
+            "approval_ticket": ""
+        },
+        "couchbase-server/mad-hatter.xml": {
+            "release": "mad-hatter",
+            "release_name": "Mad-Hatter (6.6.1)",
             "parent": "branch-master.xml",
             "production": true,
-            "start_build": 2300,
-            "interval": 120,
+            "start_build": 9000,
+            "trigger_blackduck": true,
+            "interval": 60,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-40528"
+        },
+        "couchbase-server/mad-hatter/6.6.0.xml": {
+            "release": "mad-hatter",
+            "release_name": "Mad-Hatter 6.6.0-MP4",
+            "parent": "couchbase-server/mad-hatter.xml",
+            "interval": 60,
+            "restricted": true,
+            "approval_ticket": "MB-42126"
+        },
+        "couchbase-server/mad-hatter/6.5.1.xml": {
+            "release": "mad-hatter",
+            "release_name": "Mad-Hatter 6.5.1-MP6",
+            "parent": "couchbase-server/mad-hatter.xml",
+            "start_build": 4927,
+            "interval": 60,
+            "restricted": true,
+            "approval_ticket": "MB-42106"
+        },
+        "couchbase-server/mad-hatter/6.5.0.xml": {
+            "release": "mad-hatter",
+            "release_name": "Mad-Hatter 6.5.0-MP1",
+            "parent": "couchbase-server/mad-hatter.xml",
+            "start_build": 4927,
+            "interval": 1440,
+            "restricted": true,
+            "approval_ticket": "MB-38184"
+        },
+        "couchbase-server/alice.xml": {
+            "release": "alice",
+            "release_name": "Alice 6.0.5",
+            "parent": "branch-master.xml",
+            "production": true,
+            "start_build": 3300,
+            "interval": 240,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-40511"
+        },
+        "couchbase-server/alice/6.0.4.xml": {
+            "branch": "alice-6.0.4",
+            "release": "alice",
+            "release_name": "Alice 6.0.4-MP2",
+            "parent": "couchbase-server/alice/6.0.4.xml",
+            "production": true,
+            "start_build": 2800,
+            "interval": 90,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-41310"
+        },
+        "couchbase-server/alice/6.0.3.xml": {
+            "branch": "alice-6.0.3",
+            "release": "alice",
+            "release_name": "Alice 6.0.3",
+            "parent": "couchbase-server/alice.xml",
+            "production": true,
+            "start_build": 2800,
+            "interval": 1440,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-37114"
+        },
+        "couchbase-server/alice/6.0.2.xml": {
+            "branch": "alice-6.0.2",
+            "release": "alice",
+            "release_name": "Alice 6.0.2",
+            "parent": "couchbase-server/alice.xml",
+            "production": true,
+            "start_build": 2414,
+            "interval": 1440,
             "keep_git": true,
             "restricted": true,
             "approval_ticket": "MB-32630"
@@ -30,14 +116,14 @@
         "couchbase-server/alice/6.0.1.xml": {
             "branch": "alice-6.0.1",
             "release": "alice",
-            "release_name": "Alice 6.0.1",
+            "release_name": "Alice 6.0.1-MP1",
             "parent": "couchbase-server/alice.xml",
             "production": true,
-            "start_build": 2038,
+            "start_build": 2039,
             "interval": 1440,
             "keep_git": true,
             "restricted": true,
-            "approval_ticket": "MB-31466"
+            "approval_ticket": "MB-33744"
         },
         "couchbase-server/alice/6.0.0.xml": {
             "branch": "alice-6.0.0",
@@ -56,11 +142,35 @@
             "release_name": "Vulcan (mainline)",
             "parent": "branch-master.xml",
             "production": true,
-            "start_build": 4300,
-            "interval": 120,
+            "start_build": 4700,
+            "interval": 1440,
             "keep_git": true,
             "restricted": true,
-            "approval_ticket": "MB-32627"
+            "approval_ticket": "MB-35058"
+        },
+        "couchbase-server/vulcan/5.5.5.xml": {
+            "branch": "vulcan-5.5.5",
+            "release": "vulcan",
+            "release_name": "Vulcan 5.5.5-MP2",
+            "parent": "couchbase-server/vulcan.xml",
+            "production": true,
+            "start_build": 4300,
+            "interval": 1440,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-36435"
+        },
+        "couchbase-server/vulcan/5.5.4.xml": {
+            "branch": "vulcan-5.5.4",
+            "release": "vulcan",
+            "release_name": "Vulcan 5.5.4-MP1",
+            "parent": "couchbase-server/vulcan.xml",
+            "production": true,
+            "start_build": 4300,
+            "interval": 1440,
+            "keep_git": true,
+            "restricted": true,
+            "approval_ticket": "MB-34207"
         },
         "couchbase-server/vulcan/5.5.3.xml": {
             "branch": "vulcan-5.5.3",
@@ -116,7 +226,7 @@
             "parent": "branch-master.xml",
             "production": true,
             "start_build": 6200,
-            "interval": 120,
+            "interval": 1440,
             "keep_git": true,
             "restricted": true,
             "approval_ticket": "MB-33096"
@@ -136,14 +246,14 @@
         "couchbase-server/spock/5.1.1.xml": {
             "branch": "spock-5.1.1",
             "release": "spock",
-            "release_name": "Spock 5.1.1-MP1",
+            "release_name": "Spock 5.1.1-SB1",
             "parent": "couchbase-server/spock.xml",
             "production": true,
             "start_build": 5700,
             "interval": 1440,
             "keep_git": true,
             "restricted": true,
-            "approval_ticket": "MB-30619"
+            "approval_ticket": "MB-33400"
         },
         "couchbase-server/spock/5.1.0.xml": {
             "branch": "spock-5.1.0",
@@ -287,14 +397,6 @@
             "start_build": 5900,
             "restricted": true,
             "approval_ticket": "MB-20241"
-        },
-        "rel-3.0.x.xml": {
-            "release": "3.x",
-            "release_name": "3.1.6-MP1",
-            "parent": "branch-master.xml",
-            "do-build": false,
-            "restricted": true,
-            "approval_ticket": "MB-21509"
         }
     }
 }

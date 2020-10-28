@@ -1,27 +1,73 @@
 {
     "product": "couchbase-lite-log",
     "manifests": {
-        "couchbase-lite-log/cobalt.xml": {
-             "release": "2.6.0",
-             "release_name": "Couchbase Lite Log - Cobalt 2.6.0",
+        "couchbase-lite-log/lithium.xml": {
+             "release": "3.0.0",
+             "release_name": "Couchbase Lite Log - Lithium",
              "production": true,
              "interval": 240,
              "restricted": false,
              "start_build": 1,
              "keep_git": true,
-             "do-build": true,
-             "module_projects": [ "couchbase-mobile-tools", "couchbase-lite-core" ]
+             "module_projects": [
+                 "couchbase-mobile-tools",
+                 "couchbase-lite-core"
+             ]
          },
-         "couchbase-lite-log/iridium.xml": {
-            "release": "2.5.0",
-            "release_name": "Couchbase Lite Log - Iridium 2.5.0",
+        "couchbase-lite-log/hydrogen.xml": {
+            "release": "2.8.0",
+            "release_name": "Couchbase Lite Log - Hydrogen",
             "production": true,
-            "interval": 240,
+            "interval": 90,
             "restricted": false,
-            "start_build": 45,
+            "start_build": 1,
             "keep_git": true,
-            "do-build": true,
-            "module_projects": [ "couchbase-mobile-tools", "couchbase-lite-core" ]
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-log/mercury.xml": {
+            "release": "2.7.1",
+            "release_name": "Couchbase Lite Log - Mercury",
+            "production": true,
+            "interval": 90,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-log/cobalt.xml": {
+            "release": "2.6.4",
+            "release_name": "Couchbase Lite Log - Cobalt",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do_build": false,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-log/iridium.xml": {
+            "release": "2.5.1",
+            "release_name": "Couchbase Lite Log - Iridium",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
         }
     }
 }

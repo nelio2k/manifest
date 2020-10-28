@@ -24,7 +24,7 @@
   <project name="goxdcr" path="goproj/src/github.com/couchbase/goxdcr" revision="bdc8bc82b7847138a59f27fd5cc6ce2d1d8f01c4"/>
   <project name="gometa" path="goproj/src/github.com/couchbase/gometa" revision="c995daf62dbcd6da60d6a868bfeb0faf69ddadf5"/>
   <project name="nitro" path="goproj/src/github.com/couchbase/nitro" revision="f3bef3551997be504612a2d05a8b324b3bfdfe1b"/>
-  <project name="indexing" path="goproj/src/github.com/couchbase/indexing" revision="8443db9caeab1a2ab54ffb69130453e546cbd597"/>
+  <project name="indexing" path="goproj/src/github.com/couchbase/indexing" revision="6.0.1"/>
   <project name="plasma" path="goproj/src/github.com/couchbase/plasma" remote="couchbase-priv" groups="notdefault,enterprise" revision="53c7714a7ff072a76f202bc79be77b363c78aec8"/>
   <project name="eventing" path="goproj/src/github.com/couchbase/eventing" groups="notdefault,enterprise" revision="f6a7443859b5213ff4dfcdef7bb0bcd37363b9eb"/>
   <project name="kv_engine" revision="94a16e416b1d1c1f744478b55ad278372e6bbfaf" groups="kv"/>
@@ -39,7 +39,7 @@
   <project name="sigar" groups="kv" revision="73353fe6dad8f3d67409feefb9b17f90f6de917b"/>
   <project name="subjson" groups="kv" revision="c30c3d4c250e68e81c57aa1e8ae91ffd21243cdb"/>
   <project name="testrunner" revision="alice"/>
-  <project name="tlm" revision="8625abafc3a6907dd43cce621939b4a09335ceed" groups="kv">
+  <project name="tlm" revision="8bbe7c2daf6d6d27b724efcbd3d19b55e4472df4" groups="kv">
     <copyfile src="GNUmakefile" dest="GNUmakefile"/>
     <copyfile src="Makefile" dest="Makefile"/>
     <copyfile src="CMakeLists.txt" dest="CMakeLists.txt"/>
@@ -146,9 +146,9 @@
   <project name="HdrHistogram_c" remote="couchbasedeps" revision="d200fc0f68695d4aef1fad5c3c8cc55f8c033014" path="third_party/HdrHistogram_c" groups="kv"/>
 
   <!-- Couchbase internal build infrastructure -->
-  <project name="build" revision="39057a59b788c50aa32a5102a718ef910e893a59" path="cbbuild" groups="notdefault,build">
+  <project name="build" revision="dc55cf8e9613ddf1bd6db4a662d1ecc3668223da" path="cbbuild" groups="notdefault,build">
     <annotation name="VERSION" value="6.0.1" keep="true"/>
   </project>
-  <project name="voltron" revision="be41d2649d616c66f8dce2d9231c4be25e91db66" remote="couchbase-priv" groups="notdefault,packaging"/>
+  <project name="voltron" revision="6.0.1" remote="couchbase-priv" groups="notdefault,packaging"/>
   <project name="couchdbx-app" groups="notdefault,packaging" revision="2ce6ce3597dd9437210446a861a3a881ca4bb248"/>
 </manifest>

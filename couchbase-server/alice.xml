@@ -10,14 +10,14 @@
 
   <!-- Core Couchbase Server projects -->
   <project name="backup" remote="couchbase-priv" path="goproj/src/github.com/couchbase/backup" groups="notdefault,enterprise" revision="alice"/>
-  <project name="cbft" revision="a33ad7b7000a9d8d237ba273c47cc100401a0fb0" path="goproj/src/github.com/couchbase/cbft"/>
+  <project name="cbft" revision="alice" path="goproj/src/github.com/couchbase/cbft"/>
   <project name="cbgt" revision="0a94f40b9080e0ecb11d3b7531a58c5e6a4a4465" path="goproj/src/github.com/couchbase/cbgt"/>
-  <project name="cbq-gui" remote="couchbase-priv" path="goproj/src/github.com/couchbase/cbq-gui" groups="notdefault,enterprise" revision="19fecfe58921c162a31c156781bd2a512711f14d"/>
+  <project name="cbq-gui" remote="couchbase-priv" path="goproj/src/github.com/couchbase/cbq-gui" groups="notdefault,enterprise" revision="alice"/>
   <project name="cbsummary" path="goproj/src/github.com/couchbase/cbsummary" revision="dbfa1c0d73f0e49f6f04e390f03de8f9a6cee769"/>
   <project name="couch_rocks" remote="couchbase-priv" groups="notdefault,kv_ee,enterprise" revision="75f37fa46bfe5e445dee077157303968a3e09126"/>
   <project name="couchbase-cli" revision="alice"/>
   <project name="couchdb" revision="alice"/>
-  <project name="couchstore" groups="kv" revision="vulcan"/>
+  <project name="couchstore" groups="kv" revision="alice"/>
   <project name="docloader" path="goproj/src/github.com/couchbase/docloader" revision="05067021a042a1b63e100a486afd7ebddab4c535"/>
   <project name="forestdb" revision="vulcan" groups="kv"/>
   <project name="geocouch" revision="2a0e73f43451045f157640eec59ced72da18471f"/>
@@ -32,7 +32,7 @@
   <project name="moxi" groups="kv" revision="cd8da46b9b953800d430c8b0aa4667790727ed6f"/>
   <project name="ns_server" revision="alice"/>
   <project name="phosphor" groups="kv" revision="96501c57bb0fd61c85cba6f63101aed2bcf41d38"/>
-  <project name="platform" groups="kv" revision="2fbe5179a2673a9275cd0906daa4b1cab38a3eb5"/>
+  <project name="platform" groups="kv" revision="alice"/>
   <project name="product-texts" groups="kv" revision="8cf7d25a1dcb5434ea44983c0bed202fb9cc8351"/>
   <project name="query" revision="alice" path="goproj/src/github.com/couchbase/query"/>
   <project name="query-ui" revision="alice"/>
@@ -78,7 +78,7 @@
   <project name="vellum" path="godeps/src/github.com/couchbase/vellum" revision="0ceea4a37442f76199b9259840baf48d17af3c1a"/>
 
   <!-- Go support libraries - Bleve-supported -->
-  <project name="bleve" remote="blevesearch" revision="5d4917326972a5fe6f1e094ec439f66f69c92c3f" path="godeps/src/github.com/blevesearch/bleve"/>
+  <project name="bleve" remote="blevesearch" revision="f5f59722bc8b1015c35e98b26eb95ba64393cd90" path="godeps/src/github.com/blevesearch/bleve"/>
   <project name="blevex" remote="blevesearch" revision="4b158bb555a3297565afecf6fae675c74f1e47df" path="godeps/src/github.com/blevesearch/blevex"/>
   <project name="bleve-mapping-ui" remote="blevesearch" revision="f551b6d4f32bb920a83dd28c705bddd5de0d03b2" path="godeps/src/github.com/blevesearch/bleve-mapping-ui"/>
   <project name="go-porterstemmer" remote="blevesearch" revision="23a2c8e5cf1f380f27722c6d2ae8896431dc7d0e" path="godeps/src/github.com/blevesearch/go-porterstemmer"/>
@@ -147,8 +147,8 @@
 
   <!-- Couchbase internal build infrastructure -->
   <project name="build" revision="alice" path="cbbuild" groups="notdefault,build">
-    <annotation name="VERSION" value="6.0.2" keep="true"/>
+    <annotation name="VERSION" value="6.0.5" keep="true"/>
   </project>
   <project name="voltron" revision="alice" remote="couchbase-priv" groups="notdefault,packaging"/>
-  <project name="couchdbx-app" groups="notdefault,packaging" revision="2ce6ce3597dd9437210446a861a3a881ca4bb248"/>
+  <project name="couchdbx-app" groups="notdefault,packaging" revision="alice"/>
 </manifest>

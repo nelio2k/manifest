@@ -1,76 +1,97 @@
 {
     "product": "couchbase-lite-core",
     "manifests": {
-        "couchbase-lite-core/cobalt.xml": {
-            "release": "2.6.0",
-            "release_name": "Couchbase Lite Core - Cobalt",
-            "production": true,
-            "interval": 90,
-            "restricted": false,
-            "start_build": 2000,
-            "keep_git": true,
-            "module_projects": [ "couchbase-lite-core" ]
-        },
-        "couchbase-lite-core/iridium.xml": {
-            "release": "2.5.0",
-            "release_name": "Couchbase Lite Core - Iridium",
-            "production": true,
-            "interval": 180,
-            "restricted": false,
-            "start_build": 1732,
-            "keep_git": true,
-            "module_projects": [ "couchbase-lite-core" ]
-        },
-        "couchbase-lite-core/2.1.xml": {
-             "release": "2.1.5",
-             "release_name": "Couchbase Lite Core - 2.1.5",
+         "couchbase-lite-core/lithium.xml": {
+             "release": "3.0.0",
+             "release_name": "Couchbase Lite Core - Lithium",
              "production": true,
              "interval": 240,
              "restricted": false,
              "start_build": 1,
              "keep_git": true,
-             "module_projects": [ "couchbase-lite-core" ]
+             "trigger_blackduck": true,
+             "module_projects": [
+                 "couchbase-lite-core"
+             ]
          },
-         "couchbase-lite-core/2.1/2.1.2.xml": {
-              "release": "2.1.2",
-              "release_name": "Couchbase Lite Core - 2.1.2",
-              "production": true,
-              "interval": 1440,
-              "restricted": false,
-              "start_build": 1,
-              "keep_git": true,
-              "module_projects": [ "couchbase-lite-core" ]
-          },
-         "couchbase-lite-core/2.1/2.1.0.xml": {
-             "release": "2.1.0",
-             "release_name": "Couchbase Lite Core - 2.1.0",
+        "couchbase-lite-core/hydrogen.xml": {
+            "release": "2.8.0",
+            "release_name": "Couchbase Lite Core - Hydrogen",
+            "production": true,
+            "interval": 90,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "trigger_blackduck": true,
+            "module_projects": [
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-core/mercury.xml": {
+            "release": "2.7.1",
+            "release_name": "Couchbase Lite Core - Mercury",
+            "production": true,
+            "interval": 90,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "trigger_blackduck": true,
+            "do_build": false,
+            "module_projects": [
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-core/2.7.0/2.7.0.1.xml": {
+             "release": "2.7.0.1",
+             "release_name": "Couchbase Lite Core - 2.7.0 MP1",
              "production": true,
              "interval": 1440,
              "restricted": false,
              "start_build": 1,
              "keep_git": true,
-             "module_projects": [ "couchbase-lite-core" ]
+             "do_build": false,
+             "module_projects": [
+                 "couchbase-lite-core"
+             ]
          },
-        "couchbase-lite-core/2.0/2.0.2.xml": {
-            "release": "2.0.2",
-            "release_name": "Couchbase Lite Core - 2.0.2",
+        "couchbase-lite-core/cobalt.xml": {
+            "release": "2.6.4",
+            "release_name": "Couchbase Lite Core - Cobalt",
             "production": true,
             "interval": 1440,
             "restricted": false,
-            "start_build": 900,
+            "start_build": 1,
             "keep_git": true,
-            "module_projects": [ "couchbase-lite-core" ]
+            "do_build": false,
+            "module_projects": [
+                "couchbase-lite-core"
+            ]
         },
-        "couchbase-lite-core/2.0/2.0.0.xml": {
-            "release": "2.0.0",
-            "release_name": "Couchbase Lite Core - 2.0.0",
+        "couchbase-lite-core/iridium.xml": {
+            "release": "2.5.3",
+            "release_name": "Couchbase Lite Core - Iridium",
             "production": true,
             "interval": 1440,
             "restricted": false,
-            "start_build": 800,
+            "start_build": 1,
             "keep_git": true,
-            "module_projects": [ "couchbase-lite-core" ]
+            "do-build": false,
+            "module_projects": [
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-core/2.1.xml": {
+            "release": "2.1.5",
+            "release_name": "Couchbase Lite Core - 2.1.5",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [
+                "couchbase-lite-core"
+            ]
         }
     }
 }
-

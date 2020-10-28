@@ -3,18 +3,27 @@
   <remote name="couchbase" fetch="git://github.com/couchbase/"/>
   <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"/>
 
+  <remote name="google" fetch="git://github.com/google/"/>
+  <remote name="googlesource" fetch="https://chromium.googlesource.com/"/>
+
   <default remote="couchbase" revision="master"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned primary repository                 -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="breakpad" path="breakpad" remote="couchbasedeps" revision="20160926-couchbase"/>
+  <project name="google-breakpad" path="breakpad" remote="couchbasedeps" revision="couchbase-20200430"/>
+
+  <!-- third-party forks, extracted from "gclient" by hand -->
+  <project name="linux-syscall-support" path="breakpad/src/third_party/lss" remote="googlesource" revision="fd00dbbd0c06a309c657d89e9430143b179ff6db"/>
+  <project name="protobuf" path="breakpad/src/third_party/protobuf/protobuf" remote="google" revision="cb6dd4ef5f82e41e06179dcd57d3b1d9246ad6ac"/>
+  <project name="external/gyp" path="breakpad/src/tools/gyp" remote="googlesource" revision="324dd166b7c0b39d513026fa52d6280ac6d56770"/>
+  <project name="googletest" path="breakpad/src/testing" remote="google" revision="5ec7f0c4a113e2f18ac2c6cc7df51ad6afc24081"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <project name="build-tools" path="build-tools"/>
   <project name="build" path="cbbuild" revision="36c14bff75870f6995a867c5a07f4ecd037eb68c">
-    <annotation name="VERSION" value="0.1.0" keep="true"/>
+    <annotation name="VERSION" value="20200430" keep="true"/>
   </project>
 </manifest>

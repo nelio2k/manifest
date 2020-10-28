@@ -1,8 +1,8 @@
 {
     "manifests": {
         "cbdeps/curl/master.xml": {
-            "release": "7.64.0",
-            "release_name": "curl 7.64.0",
+            "release": "7.66.0",
+            "release_name": "curl 7.66.0",
             "production": true,
             "restricted": false,
             "start_build": 1,
@@ -10,13 +10,17 @@
             "jenkins_job": "cbdeps-build",
             "platforms": [ "amzn2",
                            "centos7",
+                           "centos8",
                            "debian8",
                            "debian9",
+                           "debian10",
                            "macos",
+                           "rhel8",
                            "suse12",
                            "suse15",
                            "ubuntu16.04",
                            "ubuntu18.04",
+                           "ubuntu20.04",
                            "windows_msvc2017" ],
             "do-build": false,
             "keep_git": true

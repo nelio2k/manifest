@@ -1,39 +1,45 @@
-# Which Manifest Do I Use?
+# What is here?
 
-## Released Versions of Couchbase Server
+These are manifests describing the source code which goes into building
+many Couchbase products. They are intended to be read using the
+[https://gerrit.googlesource.com/git-repo/+/refs/heads/master/README.md](repo tool).
+
+Each product (or family of products) has a top-level directory, containing
+manifests and subdirectories based on the various releases of those products.
 
 When we make a release, we take the manifest emitted from the builder
 and store it in the released/ directory.  This manifest only has exact
 commit SHAs, so that it explicitly describes which revision was used,
 in both Couchbase and external repositories.
 
-It also gives the revision of the "voltron" repo used in the build.
-Voltron contains build instructions --- like RPM spec files -- that
-are used at the top level before the manifest is used to fetch files
-from the source repos.  Because the voltron repo is private, it is
-marked with the "notdefault" group so "repo" will not attempt to
-download it unless the command "repo init -g all" is specified.
+# Which Manifest Do I Use?
 
-To replicate a released build use a manifest from the released/
-directory.
+## Couchbase Server
 
-## Versions of Couchbase Server Prior to Release
+If you want to build the most recent development branch you should use
+"branch-master.xml" from the top-level directory (located there primarily
+for historical reasons).
 
-If you want to build the development branch you should use
-"branch-master.xml".
+Each Server release is given a code name (eg. mad-hatter, spock, etc).
+During development prior to a release, the manifest to use will be
+couchbase-server/RELEASE.xml, eg. couchbase-server/mad-hatter.xml.
 
-While preparing for a product release, based on the version of Couchbase
-server being handled, the manifest to use for the build can be in one
-of several locations:
+After GA of a given release, the "main" manifest will become the manifest
+for the next point release of that release. Eg. once Mad-Hatter is GA
+(as 6.5.0), couchbase-server/mad-hatter.xml will start being the manifest
+for the upcoming 6.5.1 point release.
 
-- For spock and later versions, in the couchbase-server/ subdirectory
-- For watson and previous versions, in the top-level directory
-  * This includes the branch-master manifest
-- For branch manifests, in the couchbase-server/<release>/ subdirectories
-  * The exceptions to this are sherlock 4.0.0 and 4.1.0
+Also at GA, a new manifest couchbase-server/RELEASE/VERSION.xml will be
+made based on the GA version number (couchbase-server/mad-hatter/6.5.0.xml
+in the example above). This will be used for maintenance packs, urgent
+releases, etc, but generally will have very few changes.
 
-You will not need to use any of these manifests unless you are
-contributing changes towards a Couchbase release.
+## Other products
+
+Other products have similar life-cycles to the above, although many
+products do not adopt the "code name" methodology and instead simply use
+the version number for the release name. Some products use slight
+variations on the above.
 
 ## Couchbase Experimental Builds
 

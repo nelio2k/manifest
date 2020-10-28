@@ -32,7 +32,7 @@
   <project name="moxi" groups="kv" revision="cd8da46b9b953800d430c8b0aa4667790727ed6f"/>
   <project name="ns_server" revision="vulcan"/>
   <project name="phosphor" groups="kv" revision="96501c57bb0fd61c85cba6f63101aed2bcf41d38"/>
-  <project name="platform" groups="kv" revision="2fbe5179a2673a9275cd0906daa4b1cab38a3eb5"/>
+  <project name="platform" groups="kv" revision="vulcan"/>
   <project name="product-texts" groups="kv" revision="55e45187ca8943aa8910e9ae2b59b41242d14386"/>
   <project name="query" revision="vulcan" path="goproj/src/github.com/couchbase/query"/>
   <project name="query-ui" revision="vulcan"/>
@@ -146,8 +146,8 @@
 
   <!-- Couchbase internal build infrastructure -->
   <project name="build" revision="vulcan" path="cbbuild" groups="notdefault,build">
-    <annotation name="VERSION" value="5.5.4" keep="true"/>
+    <annotation name="VERSION" value="5.5.6" keep="true"/>
   </project>
   <project name="voltron" revision="vulcan" remote="couchbase-priv" groups="notdefault,packaging"/>
-  <project name="couchdbx-app" groups="notdefault,packaging" revision="c545a8563778bfc40284caf9213c7925488e633a"/>
+  <project name="couchdbx-app" groups="notdefault,packaging" revision="vulcan"/>
 </manifest>

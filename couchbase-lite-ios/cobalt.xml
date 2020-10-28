@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="couchbase" fetch="git://github.com/couchbase/" review="review.couchbase.org"/>
-  <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/" review="review.couchbase.org"/>
-  <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/" review="review.couchbase.org"/>
-  <remote name="couchbaselabs-priv" fetch="ssh://git@github.com/couchbaselabs/" review="review.couchbase.org"/>
-  <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"/>
-  <remote name="arangodb" fetch="git://github.com/arangodb/"/>
-  <remote name="snej" fetch="git://github.com/snej/"/>
-  <remote name="rudi-cilibrasi" fetch="git://github.com/rudi-cilibrasi/"/>
-  <remote name="google" fetch="git://github.com/google/"/>
-  <remote name="ARMmbed" fetch="git://github.com/ARMmbed"/>
+  <remote fetch="git://github.com/couchbase/" name="couchbase" review="review.couchbase.org"/>
+  <remote fetch="ssh://git@github.com/couchbase/" name="couchbase-priv" review="review.couchbase.org"/>
+  <remote fetch="git://github.com/couchbaselabs/" name="couchbaselabs" review="review.couchbase.org"/>
+  <remote fetch="ssh://git@github.com/couchbaselabs/" name="couchbaselabs-priv" review="review.couchbase.org"/>
+  <remote fetch="git://github.com/couchbasedeps/" name="couchbasedeps"/>
+  <remote fetch="git://github.com/arangodb/" name="arangodb"/>
+  <remote fetch="git://github.com/snej/" name="snej"/>
+  <remote fetch="git://github.com/rudi-cilibrasi/" name="rudi-cilibrasi"/>
+  <remote fetch="git://github.com/google/" name="google"/>
+  <remote fetch="git://github.com/ARMmbed" name="ARMmbed"/>
 
   <default remote="couchbase" revision="master"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned primary repositories               -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-ios-ee" remote="couchbaselabs-priv" revision="master" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-ios" revision="master" path="couchbase-lite-ios-ee/couchbase-lite-ios"/>
+  <project groups="enterprise,notdefault" name="couchbase-lite-ios-ee" remote="couchbaselabs-priv" revision="release/cobalt"/>
+  <project name="couchbase-lite-ios" path="couchbase-lite-ios-ee/couchbase-lite-ios" revision="release/cobalt"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned Couchbase Lite Core                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-core-EE" remote="couchbase-priv" revision="205035100c305428205c1633eac2a538b43d7c2f" path="couchbase-lite-ios-ee/couchbase-lite-core-EE" groups="enterprise,notdefault"/>
-  <project name="couchbase-lite-core" revision="e9d005ebac9d5c931e1e1a3e128ad14dcd100fd1" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core"/>
-  <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/wiki"/>
+  <project groups="enterprise,notdefault" name="couchbase-lite-core-EE" path="couchbase-lite-ios-ee/couchbase-lite-core-EE" remote="couchbase-priv" revision="3bfc618860793a5a2778688cfa85ca58e161c128"/>
+  <project name="couchbase-lite-core" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core" revision="78d97ec01b334aef77641428a6f2a2e75340faac"/>
+  <project name="couchbase-lite-core.wiki" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned utility libraries                  -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="MYUtilities" remote="snej" revision="33e7e5820433aa70d38e1c5e54b13e74a91ae57f" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/MYUtilities"/>
-  <project name="BLIP-Cpp" remote="couchbaselabs" revision="0a6346a133860967b4492e6e731843ae9b453587" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/BLIP-Cpp"/>
-  <project name="fleece" remote="couchbaselabs" revision="b2c4784a687b4d956c2bbf92b00e38411e2c2bac" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/fleece"/>
-  <project name="jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/fleece/vendor/jsonsl"/>
-  <project name="sqlite3-unicodesn" remote="snej" revision="43445380e5c3ecb546472f86d5c56732a4267a3a" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/sqlite3-unicodesn"/>
+  <project name="MYUtilities" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/MYUtilities" remote="snej" revision="33e7e5820433aa70d38e1c5e54b13e74a91ae57f"/>
+  <project name="BLIP-Cpp" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/BLIP-Cpp" remote="couchbaselabs" revision="946d9aacc54b7eaeb80224ef0bcbdeba1b8b5cc5"/>
+  <project name="fleece" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/fleece" remote="couchbaselabs" revision="a065c66e3f0db0fa15c8b64dd0ff100c0b1f385a"/>
+  <project name="jsonsl" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/fleece/vendor/jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c"/>
+  <project name="sqlite3-unicodesn" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/sqlite3-unicodesn" remote="snej" revision="9042c6eed69e98623ad64e27cec4c1f7f60dde92"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Third-party utility libraries                      -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="mbedtls" remote="ARMmbed" revision="9f77017a8daf3e1fb75f7904a2e6e8960410dca9" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/mbedtls"/>
-  <project name="zlib" remote="couchbasedeps" revision="cacf7f1d4e3d44d871b605da3b647f07d718623f" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/BLIP-Cpp/vendor/zlib"/>
-  <project name="SQLiteCpp" remote="couchbasedeps" revision="676a2d7529d3acd7a7ef05b03be91e2e27c55739" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/SQLiteCpp"/>
-  <project name="googletest" remote="google" revision="ec44c6c1675c25b9827aacd08c02433cccde7780" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/SQLiteCpp/googletest"/>
-  <project name="civetweb" remote="couchbasedeps" revision="4341c169a789b917a4fe1cdd24f55e507d855ff5" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/civetweb"/>
+  <project name="mbedtls" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/mbedtls" remote="ARMmbed" revision="9f77017a8daf3e1fb75f7904a2e6e8960410dca9"/>
+  <project name="zlib" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/BLIP-Cpp/vendor/zlib" remote="couchbasedeps" revision="cacf7f1d4e3d44d871b605da3b647f07d718623f"/>
+  <project name="SQLiteCpp" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/SQLiteCpp" remote="couchbasedeps" revision="d0c5991ca3262f6a5fd7b6c8d9773ef9fbe0206d"/>
+  <project name="googletest" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/SQLiteCpp/googletest" remote="google" revision="ec44c6c1675c25b9827aacd08c02433cccde7780"/>
+  <project name="civetweb" path="couchbase-lite-ios-ee/couchbase-lite-ios/vendor/couchbase-lite-core/vendor/civetweb" remote="couchbasedeps" revision="4341c169a789b917a4fe1cdd24f55e507d855ff5"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned mobile testkit                     -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="mobile-testkit" remote="couchbaselabs-priv" revision="master" groups="notdefault"/>
+  <project groups="notdefault" name="mobile-testkit" remote="couchbaselabs-priv" revision="1c94b2716f82404547a4a401e104bcfcf539bb88"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="product-texts"/>
-  <project name="build">
-    <annotation name="VERSION" value="2.6.0" keep="true"/>
+  <project name="product-texts" revision="93a092c9139c81813cda4276ee437304fb82f8f2"/>
+  <project name="build" revision="fcafa997a04698f9922721ace1ac86852f21779a">
+    <annotation keep="true" name="VERSION" value="2.6.4"/>
   </project>
 </manifest>

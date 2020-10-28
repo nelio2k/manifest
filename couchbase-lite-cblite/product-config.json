@@ -1,0 +1,61 @@
+{
+    "product": "couchbase-lite-cblite",
+    "manifests": {
+        "couchbase-lite-cblite/lithium.xml": {
+             "release": "3.0.0",
+             "release_name": "cblite tool - Lithium",
+             "production": true,
+             "interval": 240,
+             "restricted": false,
+             "start_build": 1,
+             "keep_git": true,
+             "do-build": true,
+             "module_projects": [
+                 "couchbase-mobile-tools",
+                 "couchbase-lite-core"
+             ]
+         },
+        "couchbase-lite-cblite/hydrogen.xml": {
+            "release": "2.8.0",
+            "release_name": "cblite tool - Hydrogen",
+            "production": true,
+            "interval": 240,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": true,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-cblite/mercury.xml": {
+            "release": "2.7.1",
+            "release_name": "cblite tool - Mercury",
+            "production": true,
+            "interval": 240,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        },
+        "couchbase-lite-cblite/cobalt.xml": {
+            "release": "2.6.4",
+            "release_name": "cblite tool - Cobalt",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do_build": false,
+            "module_projects": [
+                "couchbase-mobile-tools",
+                "couchbase-lite-core"
+            ]
+        }
+    }
+}

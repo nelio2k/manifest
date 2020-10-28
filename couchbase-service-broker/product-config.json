@@ -1,0 +1,16 @@
+{
+    "product": "couchbase-service-broker",
+    "manifests": {
+        "couchbase-service-broker/master.xml": {
+            "release": "1.0.0",
+            "release_name": "Couchbase Service Broker 1.0.0 - master",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 100,
+            "trigger_blackduck": true,
+            "jenkins_job": "couchbase-k8s-microservice-build",
+            "keep_git": true
+        }
+    }
+}

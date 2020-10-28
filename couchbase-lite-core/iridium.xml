@@ -11,19 +11,19 @@
   <remote name="ARMmbed" fetch="git://github.com/ARMmbed"/>
   <remote name="ceejatec" fetch="git://github.com/ceejatec/"/>
 
-  <default remote="couchbase" revision="master"/>
+  <default remote="couchbase" revision="release/iridium"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned Couchbase Lite Core and EE         -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-core" revision="release/iridium"/>
-  <project name="couchbase-lite-core-EE" remote="couchbase-priv" revision="release/iridium" groups="notdefault,enterprise"/>
+  <project name="couchbase-lite-core"/>
+  <project name="couchbase-lite-core-EE" remote="couchbase-priv" groups="notdefault,enterprise"/>
 
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Couchbase-owned utility libraries                  -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="BLIP-Cpp" remote="couchbaselabs" revision="0a6346a133860967b4492e6e731843ae9b453587" path="couchbase-lite-core/vendor/BLIP-Cpp"/>
-  <project name="fleece" remote="couchbaselabs" revision="b2c4784a687b4d956c2bbf92b00e38411e2c2bac" path="couchbase-lite-core/vendor/fleece"/>
+  <project name="BLIP-Cpp" remote="couchbaselabs" revision="62fc5137681e61ea20e0ce7e0b7208eba39bd077" path="couchbase-lite-core/vendor/BLIP-Cpp"/>
+  <project name="fleece" remote="couchbaselabs" revision="c50241d0ed261afbb46e6c4242cfef01669a8d35" path="couchbase-lite-core/vendor/fleece"/>
   <project name="jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c" path="couchbase-lite-core/vendor/fleece/vendor/jsonsl"/>
   <project name="sqlite3-unicodesn" remote="snej" revision="43445380e5c3ecb546472f86d5c56732a4267a3a" path="couchbase-lite-core/vendor/sqlite3-unicodesn"/>
   <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-lite-core/wiki"/>
@@ -41,9 +41,9 @@
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <!-- Build support - build scripts, etc.                -->
   <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="build" path="cbbuild" revision="671ea1d94ad417c1a301094098b1ceae8462fd04">
-    <annotation name="VERSION" value="2.5.0" keep="true"/>
+  <project name="tlm" revision="2d46e032cf08727e8e5fab67d05c4f1b051989e4"/>
+  <project name="build" path="cbbuild" revision="67027c2e334330a8682714c2b430af33f61d84a3">
+    <annotation name="VERSION" value="2.5.3" keep="true"/>
     <copyfile src="scripts/jenkins/lite-core/CMakeLists.txt" dest="CMakeLists.txt"/>
   </project>
-  <project name="tlm"/>
 </manifest>

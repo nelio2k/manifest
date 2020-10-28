@@ -1,37 +1,206 @@
 {
     "product": "couchbase-lite-android",
     "manifests": {
-        "couchbase-lite-android/cobalt.xml": {
-            "release": "2.6.0",
-            "release_name": "Couchbase Lite Android - Cobalt 2.6.0",
+        "couchbase-lite-android/lithium.xml": {
+            "release": "3.0.0",
+            "release_name": "Couchbase Lite Android - Lithium 3.0.0",
             "production": true,
-            "interval": 90,
+            "interval": 60,
             "restricted": false,
             "start_build": 1,
             "keep_git": true,
+            "trigger_blackduck": true,
             "do-build": true,
-            "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
+            "module_projects": [ "couchbase-lite-java-ee-root" ],
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/hydrogen.xml": {
+            "release": "2.8.0",
+            "release_name": "Couchbase Lite Android - Hydrogen 2.8.0",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "trigger_blackduck": true,
+            "do-build": false,
+            "module_projects": [ "product-texts", "couchbase-lite-java-ee-root", "couchbase-lite-java-common", "couchbase-lite-java-ce", "couchbase-lite-core-EE", "couchbase-lite-core" ],
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/mercury/2.7.1.2.xml": {
+            "release": "2.7.1.2",
+            "release_name": "Couchbase Lite Android - Mercury 2.7.1.2",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/mercury/2.7.1.1.xml": {
+            "release": "2.7.1.1",
+            "release_name": "Couchbase Lite Android - Mercury 2.7.1.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/mercury.xml": {
+            "release": "2.7.1",
+            "release_name": "Couchbase Lite Android - Mercury 2.7.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/mercury/2.7.0.1.xml": {
+            "release": "2.7.0.1",
+            "release_name": "Couchbase Lite Android - Mercury 2.7.0.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt/2.6.4.2.xml": {
+            "release": "2.6.4.2",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.4.2",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt/2.6.4.1.xml": {
+            "release": "2.6.4.1",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.4.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt.xml": {
+            "release": "2.6.4",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.4",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt/2.6.2.2.xml": {
+            "release": "2.6.2.2",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.2.2",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt/2.6.2.1.xml": {
+            "release": "2.6.2.1",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.2.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
+        },
+        "couchbase-lite-android/cobalt/2.6.0.1.xml": {
+            "release": "2.6.0.1",
+            "release_name": "Couchbase Lite Android - Cobalt 2.6.0.1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "jenkins_job": "couchbase-lite-android"
         },
         "couchbase-lite-android/iridium.xml": {
+            "release": "2.5.3",
+            "release_name": "Couchbase Lite Android - Iridium 2.5.3",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
+        },
+        "couchbase-lite-android/2.5/2.5.2.1.xml": {
+            "release": "2.5.2.1",
+            "release_name": "Couchbase Lite Android - Iridium 2.5.2-MP1",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
+        },
+        "couchbase-lite-android/2.5/2.5.2.xml": {
+            "release": "2.5.2",
+            "release_name": "Couchbase Lite Android - Iridium 2.5.2",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
+        },
+        "couchbase-lite-android/2.5/2.5.0.1.xml": {
+            "release": "2.5.0.1",
+            "release_name": "Couchbase Lite Android - 2.5.0.1 (CBSE-6768)",
+            "production": true,
+            "interval": 1440,
+            "restricted": false,
+            "start_build": 1,
+            "keep_git": true,
+            "do-build": false,
+            "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
+        },
+        "couchbase-lite-android/2.5/2.5.0.xml": {
             "release": "2.5.0",
             "release_name": "Couchbase Lite Android - Iridium 2.5.0",
             "production": true,
-            "interval": 180,
+            "interval": 1440,
             "restricted": false,
             "start_build": 184,
             "keep_git": true,
-            "do-build": true,
+            "do-build": false,
             "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
         },
         "couchbase-lite-android/2.1.xml": {
             "release": "2.1.5",
             "release_name": "Couchbase Lite Android - 2.1.5",
             "production": true,
-            "interval": 90,
+            "interval": 1440,
             "restricted": false,
             "start_build": 1,
             "keep_git": true,
-            "do-build": true,
+            "do-build": false,
             "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
         },
         "couchbase-lite-android/2.1/2.1.2.xml": {
@@ -42,7 +211,7 @@
             "restricted": false,
             "start_build": 1,
             "keep_git": true,
-            "do-build": true,
+            "do-build": false,
             "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
         },
         "couchbase-lite-android/2.1/2.1.0.xml": {
@@ -53,7 +222,7 @@
              "restricted": false,
              "start_build": 1,
              "keep_git": true,
-             "do-build": true,
+             "do-build": false,
              "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
          },
         "couchbase-lite-android/2.0/2.0.2.xml": {
@@ -64,7 +233,7 @@
             "restricted": false,
             "start_build": 1,
             "keep_git": true,
-            "do-build": true,
+            "do-build": false,
             "module_projects": [ "couchbase-lite-android-ee", "couchbase-lite-android" ]
         },
         "couchbase-lite-android/2.0/2.0.0.xml": {

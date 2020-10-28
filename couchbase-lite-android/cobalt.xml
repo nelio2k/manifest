@@ -1,59 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/" review="review.couchbase.org"/>
   <remote name="couchbase" fetch="git://github.com/couchbase/" review="review.couchbase.org"/>
+  <remote name="couchbase-priv" fetch="ssh://git@github.com/couchbase/" review="review.couchbase.org"/>
   <remote name="couchbaselabs-priv" fetch="ssh://git@github.com/couchbaselabs/" review="review.couchbase.org"/>
-  <remote name="couchbaselabs" fetch="git://github.com/couchbaselabs/" review="review.couchbase.org"/>
-  <remote name="couchbasedeps" fetch="git://github.com/couchbasedeps/"/>
-  <remote name="arangodb" fetch="git://github.com/arangodb/"/>
-  <remote name="snej" fetch="git://github.com/snej/"/>
-  <remote name="rudi-cilibrasi" fetch="git://github.com/rudi-cilibrasi/"/>
-  <remote name="google" fetch="git://github.com/google/"/>
-  <remote name="ARMmbed" fetch="git://github.com/ARMmbed"/>
 
-  <default remote="couchbase" revision="master"/>
+  <default remote="couchbase" revision="release/cobalt"/>
 
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Couchbase-owned primary repository                 -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-android-ee" remote="couchbaselabs-priv" revision="master" groups="notdefault,enterprise"/>
-  <project name="couchbase-lite-android" revision="master" path="couchbase-lite-android-ee/libs/couchbase-lite-android"/>
-
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Couchbase-owned Couchbase Lite Core                -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="couchbase-lite-core-EE" remote="couchbase-priv" revision="205035100c305428205c1633eac2a538b43d7c2f" groups="notdefault,enterprise" path="couchbase-lite-android-ee/libs/couchbase-lite-core-EE"/>
-  <project name="couchbase-lite-core" revision="7479ace115a686abb0d8f9328c55c2d0ed60e587" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core"/>
-  <project name="couchbase-lite-core.wiki" revision="9dd7deb1b42253ea3f50f447718ebf5eb2387394" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/wiki"/>
-
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Couchbase-owned utility libraries                  -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="BLIP-Cpp" remote="couchbaselabs" revision="0a6346a133860967b4492e6e731843ae9b453587" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/BLIP-Cpp"/>
-  <project name="fleece" remote="couchbaselabs" revision="b2c4784a687b4d956c2bbf92b00e38411e2c2bac" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/fleece"/>
-  <project name="jsonsl" remote="snej" revision="684b60f9af68b8c397422e74d0c2dd206de16a2c" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/fleece/vendor/jsonsl"/>
-  <project name="sqlite3-unicodesn" remote="snej" revision="43445380e5c3ecb546472f86d5c56732a4267a3a" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/sqlite3-unicodesn"/>
-
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Third-party utility libraries                      -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="mbedtls" remote="ARMmbed" revision="9f77017a8daf3e1fb75f7904a2e6e8960410dca9" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/mbedtls"/>
-  <project name="zlib" remote="couchbasedeps" revision="cacf7f1d4e3d44d871b605da3b647f07d718623f" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/BLIP-Cpp/vendor/zlib"/>
-  <project name="zlibcomplete" remote="rudi-cilibrasi" revision="0908e99ea699f1093657147c73ab3aae460cb91f" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/BLIP-Cpp/vendor/zlibcomplete"/>
-  <project name="SQLiteCpp" remote="couchbasedeps" revision="676a2d7529d3acd7a7ef05b03be91e2e27c55739" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/SQLiteCpp"/>
-  <project name="googletest" remote="google" revision="ec44c6c1675c25b9827aacd08c02433cccde7780" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/SQLiteCpp/googletest"/>
-  <project name="civetweb" remote="couchbasedeps" revision="4341c169a789b917a4fe1cdd24f55e507d855ff5" path="couchbase-lite-android-ee/libs/couchbase-lite-android/libs/couchbase-lite-core/vendor/civetweb"/>
-
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Couchbase-owned mobile testkit                     -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="mobile-testkit" remote="couchbaselabs-priv" revision="master" groups="notdefault"/>
-
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <!-- Build support - build scripts, etc.                -->
-  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-  <project name="product-texts"/>
-  <project name="build" path="cbbuild">
-    <annotation name="VERSION" value="2.6.0" keep="true"/>
+  <project name="build" path="cbbuild" groups="notdefault" revision="5f3415b1a8ff88eeac8afe0cc6c12bd73a997c3d">
+    <annotation name="VERSION" value="2.6.4" keep="true"/>
   </project>
+
+  <project name="couchbase-lite-build" path="couchbase-lite-build">
+    <linkfile src="android/settings-ee.gradle" dest="settings.gradle" />
+    <linkfile src="android/version.txt" dest="version.txt"/>
+  </project>
+
+  <project name="couchbase-lite-android-ee" path="couchbase-lite-android-ee" remote="couchbaselabs-priv">
+    <linkfile src="build.gradle" dest="build.gradle" />
+    <linkfile src="gradle" dest="gradle" />
+    <linkfile src="gradlew" dest="gradlew" />
+    <linkfile src="gradlew.bat" dest="gradlew.bat" />
+    <linkfile src="gradlew.properties" dest="gradlew.properties" />
+  </project>
+
+  <project name="couchbase-lite-android" path="couchbase-lite-android"/>
+
+  <project name="couchbase-lite-java" path="couchbase-lite-java"/>
+
+  <project name="couchbase-lite-core" sync-s="true" path="couchbase-lite-core"/>
+  <project name="couchbase-lite-core-EE" sync-s="true" remote="couchbase-priv" path="couchbase-lite-core-EE"/>
 </manifest>
